@@ -27,8 +27,8 @@ function LED1_Off(){
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "lfrenteriax@hotmail.com",
-    password: "lfrenteriax",
+    userName: "654hector1@gmail.com",
+    password: "naruto798199429",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -41,9 +41,9 @@ function LED1_Off(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("lfrenteriax@hotmail.com/test");
+    client.subscribe("654hector1@gmail.com/test");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "lfrenteriax@hotmail.com/test1";
+    message.destinationName = "654hector1@gmail.com/kop";
     client.send(message);
 	
   }
@@ -62,9 +62,6 @@ function LED1_Off(){
 
   // called when a message arrives
   function onMessageArrived(message) {
-    console.log("onMessageArrived:"+message.payloadString);
-	
-	document.getElementById("sensor").innerHTML=message.payloadString;
-
+    console.log("mensaje del sensor:"+message.payloadString);
   }
   
